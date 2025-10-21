@@ -1,4 +1,4 @@
-# GrupaG27 TPTP Project
+# TPTP Project
 
 Simple static website for the Faculty of Electrical Engineering (HTML, CSS, JS).
 
