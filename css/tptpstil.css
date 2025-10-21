@@ -1,0 +1,781 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: #f4f4f4;
+  padding-top: 0px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+nav img {
+  width: 60px;
+  height: auto;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navigation ul li {
+  position: relative;
+  padding: 8px 12px;
+}
+
+.navigation ul li::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #b58900;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.navigation ul li:hover::after {
+  width: 100%;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navigation a:hover {
+  color: #b58900;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.faculty-title {
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+.social-icons-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icon-nav {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.social-icon-nav:hover {
+  transform: scale(1.15);
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.8)), url('../images/slika_fakulteta.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header-text {
+  padding-top: 100px;
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 90%;
+  line-height: 1.3;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.university-name {
+  font-size: 28px;
+  font-weight: 300;
+  color: #b58900;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.faculty-name::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #b58900;
+  margin: 20px auto 0;
+  box-shadow: 1px 1px 6px rgba(181, 137, 0, 0.7);
+}
+
+.learn-more {
+  display: block;
+  margin-top: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.learn-more:hover {
+  color: #b58900;
+}
+
+section h2,
+main h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0;
+  color: #b58900;
+}
+
+/* ========== TRI SEKCIJE (DESKTOP) ========== */
+.tri-sekcije {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  background: #fff;
+  margin-top: 20px;
+}
+
+/* ---- LIJEVA SEKCIJA ---- */
+.clanovi-grupe {
+  flex: 1;
+  border-right: 2px solid #ddd;
+  padding-right: 20px;
+}
+
+.clanovi-grupe h2 {
+  font-size: 28px;
+  color: #b58900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.clan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 230px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform .3s;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s ease;
+  border-radius: 12px;
+}
+
+.layer h3 {
+  color: white;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.img-wrapper:hover .layer {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.img-wrapper:hover .layer h3 {
+  opacity: 1;
+}
+
+.clan p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ---- CENTRALNA SEKCIJA ---- */
+.glavna-sekcija {
+  flex: 2;
+  padding: 0 20px;
+  max-width: 1000px;
+}
+
+.glavna-sekcija h2 {
+  font-size: 32px;
+  color: #b58900;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.vijest {
+  background-color: #fff8dc;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform .3s, box-shadow .3s, background-color .3s;
+  text-align: left;
+}
+
+.vijest:hover {
+  background-color: #fff3b0;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vijest img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.vijest h3 {
+  font-size: 22px;
+  color: #b58900;
+  margin: 10px 0;
+}
+
+.vijest p {
+  font-size: 17px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ---- DESNA SEKCIJA ---- */
+.desna-sekcija {
+  flex: 1;
+  border-left: 2px solid #ddd;
+  padding-left: 20px;
+}
+
+.desna-sekcija h2 {
+  font-size: 28px;
+  color: #b58900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.partner {
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+  transition: box-shadow .3s;
+}
+
+.partner:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.partner a {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.partner a:hover {
+  color: #b58900;
+}
+
+.partner p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 8px;
+}
+
+.video-container {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.mapa {
+  margin: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.info {
+  background: #fff8dc;
+}
+
+.info p {
+  margin-left: 10px;
+}
+
+/*----Footer-----*/
+.footer {
+  background: rgba(0, 0, 0, 0.733);
+  padding: 20px;
+}
+
+.footer p {
+  text-align: center;
+  font-size: 16px;
+  color: whitesmoke;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.footer ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer ul li {
+  padding: 8px 8px;
+  align-items: center;
+  color: #b58900;
+  text-decoration: underline;
+}
+
+/* ---- ODSJECI.HTML ---- */
+.odsjeci,
+.usmjerenja {
+  background: #fff;
+  padding: 60px 20px;
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.otekst {
+  display: block;
+  color: #b58900;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.otekst:hover {
+  text-decoration: underline;
+}
+
+.odsjek p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.odsjek h2 {
+  text-align: left;
+  color: #800020;
+  margin-bottom: 15px;
+}
+
+.odsjek ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.odsjek ul li {
+  font-size: 18px;
+  margin-top: 8px;
+  list-style: disc;
+}
+
+/*---- Savjeti.html ----*/
+.savjetiipitanja {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.savjeti {
+  flex: 3;
+  font-family: 'Oswald';
+  border-right: 2px solid #ddd;
+  justify-content: center;
+  margin: 20px;
+}
+
+.spusti {
+  background: #fff8dc;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 95%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 24px;
+  font-family: 'Oswald';
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.active,
+.spusti:hover {
+  background-color: #e6cc00;
+  transition: 1s ease;
+}
+
+.content {
+  padding: 0 18px;
+  width: 95%;
+  display: none;
+  overflow: hidden;
+  background-color: #fff8dc;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.pitanja {
+  flex: 1;
+}
+
+/* <---- FORMA -----> */
+.kontakt-forma {
+  padding: 20px;
+}
+
+.kontakt-forma h2 {
+  margin-top: 0;
+  color: #b58900;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.forma-grupa {
+  margin-bottom: 20px;
+}
+
+.forma-grupa label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+}
+
+.forma-grupa input,
+.forma-grupa select,
+.forma-grupa textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.forma-grupa input:focus,
+.forma-grupa textarea:focus,
+.forma-grupa select:focus {
+  border-color: #b58900;
+  background-color: #fff;
+  outline: none;
+}
+
+.forma-grupa textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.dugme {
+  background-color: #b58900;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.dugme:hover {
+  background-color: #8a6d00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.kontakt-info {
+  padding: 40px;
+}
+
+.kontakt-naslov {
+  color: #b58900;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.info-item {
+  margin-bottom: 25px;
+}
+
+.info-text h3 {
+  font-size: 18px;
+  color: #b58900;
+  margin-bottom: 8px;
+}
+
+.info-text p,
+.info-text a {
+  font-size: 16px;
+  color: #444;
+  text-decoration: none;
+  line-height: 1.5;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.info-text a:hover {
+  color: #b58900;
+  text-decoration: underline;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.social-kontakt {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-kontakt a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-color: #b58900;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-kontakt a:hover {
+  background-color: #8a6d00;
+  transform: scale(1.1);
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Navigacija */
+  .navigation {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navigation.active {
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 999;
+    padding: 20px 0;
+    overflow-y: auto;
+  }
+
+  .navigation.active ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .navigation.active ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation.active a {
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+  }
+
+  .faculty-title,
+  .social-icons-nav {
+    display: none;
+  }
+
+  /* Header */
+  .header {
+    padding: 20px;
+    padding-top: 100px;
+  }
+
+  .header-text {
+    font-size: 28px;
+    padding: 0 10px;
+  }
+
+  .university-name {
+    font-size: 18px;
+  }
+
+  .learn-more {
+    font-size: 16px;
+  }
+
+  /* Tri sekcije */
+  .tri-sekcije {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .clanovi-grupe {
+    border-right: none;
+    border-bottom: 2px solid #ddd;
+    padding-right: 0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .glavna-sekcija {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .desna-sekcija {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  /* Footer */
+  .footer ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Kontakt sekcija */
+  .savjetiipitanja {
+    flex-direction: column;
+    padding: 20px;
+    border: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text {
+    font-size: 24px;
+  }
+
+  .university-name {
+    font-size: 16px;
+  }
+
+  .kontakt-forma h2,
+  .kontakt-info h2 {
+    font-size: 20px;
+  }
+
+  .info-text h3 {
+    font-size: 16px;
+  }
+
+  .info-text p,
+  .info-text a {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontakt stranica Fakulteta elektrotehnike">
+  <title>Kontakt | Fakultet elektrotehnike</title>
+  <link rel="stylesheet" href="../css/tptpstil.css">
+
+</head>
+
+<body>
+  <!-- NAVIGACIJA -->
+  <nav>
+    <div class="nav-left">
+      <a href="../html/start.html">
+        <img src="../images/logo.png" alt="FET logo">
+      </a>
+      <span class="faculty-title">Fakultet elektrotehnike Tuzla</span>
+    </div>
+
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="navigation">
+      <ul class="nav-links">
+        <li><a href="../html/start.html">POČETNA</a></li>
+        <li><a href="../html/odsjeci.html">ODSJECI</a></li>
+        <li><a href="../html/savjeti.html">SAVJETI</a></li>
+        <li><a href="../html/kontakt.html">KONTAKT</a></li>
+      </ul>
+    </div>
+
+    <div class="social-icons-nav">
+      <a href="https://www.instagram.com/fetuzla" target="_blank">
+        <img src="../images/instagram_icon.png" alt="Instagram" class="social-icon-nav">
+      </a>
+      <a href="https://www.facebook.com/fetuzla" target="_blank">
+        <img src="../images/facebook_icon.png" alt="Facebook" class="social-icon-nav">
+      </a>
+    </div>
+  </nav>
+  <!-- Kontakt sekcija -->
+
+  <section class="header">
+    <div class="header-text">
+      <div class="faculty-name">KONTAKT</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Kontakt forma -->
+  <div class="kontakt-forma">
+    <h2>Pošaljite nam poruku</h2>
+    <form id="kontaktForma" action="#" method="POST" novalidate>
+      <div class="forma-grupa">
+        <label for="ime">Ime i prezime</label>
+        <input type="text" id="ime" name="ime" required placeholder="Unesite vaše puno ime">
+      </div>
+
+      <div class="forma-grupa">
+        <label for="email">Email adresa</label>
+        <input type="email" id="email" name="email" required placeholder="primjer@mail.com">
+      </div>
+
+      <div class="forma-grupa">
+        <label for="predmet">Predmet poruke</label>
+        <select id="predmet" name="predmet" required>
+          <option value="" disabled selected>Odaberite predmet</option>
+          <option value="upit">Opšti upit</option>
+          <option value="prijava">Prijava studija</option>
+          <option value="saradnja">Poslovna saradnja</option>
+          <option value="ostalo">Ostalo</option>
+        </select>
+      </div>
+
+      <div class="forma-grupa">
+        <label for="poruka">Vaša poruka</label>
+        <textarea id="poruka" name="poruka" required placeholder="Opišite vaš upit detaljno..."></textarea>
+      </div>
+
+      <button type="submit" class="dugme">
+        <i class="fas fa-paper-plane"></i> Pošalji poruku
+      </button>
+    </form>
+  </div>
+  <hr>
+
+  <!-- Kontakt informacije -->
+
+  <div class="kontakt-info">
+    <h2 class="kontakt-naslov">Kontakt informacije</h2>
+
+    <div class="info-item">
+      <div class="info-text">
+        <h3>Telefon</h3>
+        <p><a href="tel:+38735259601">+387 35 259 601</a></p>
+        <p><a href="tel:+38735259617">+387 35 259 617</a></p>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-text">
+        <h3>Email</h3>
+        <p><a href="mailto:dekanat@etf.untz.ba">dekanat@etf.untz.ba</a></p>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-text">
+        <h3>Radno vrijeme</h3>
+        <p>Pon - Pet: 08:00 - 16:00</p>
+        <p>Subota: 08:00 - 12:00</p>
+      </div>
+    </div>
+
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.8908110861935!2d18.674821599999994!3d44.5378682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ead228f123b2d%3A0xcf33c765f8383821!2sFaculty%20of%20Electrical%20Engineering!5e0!3m2!1shr!2sba!4v1747949549226!5m2!1shr!2sba"
+        width="100%" height="300" style="border:10px; border-radius: 10px;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Socijalne mreže -->
+    <div class="social-kontakt">
+      <a href="https://www.facebook.com/fetuzla" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/fetuzla" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+  </div>
+  </section>
+  </div>
+
+  <!-- Footer -->
+  <section class="footer">
+    <p>Dizajnirali:</p>
+    <ul>
+      <li>...</li>
+    </ul>
+    <p> Maj, 2025. godina</p>
+  </section>
+  </footer>
+  <script src="../js/tptobrazac.js"></script>
+</body>
+
+</html>
