@@ -15,12 +15,3 @@ Run locally
   - Node: `npx http-server . -p 8000`
   - Then open: `http://localhost:8000/html/start.html`
 
-Notes about paths
-- If an HTML file is inside `html/`, use:
-  - CSS: `../css/tptpstil.css`
-  - JS: `../js/tptobrazac.js`
-  - Images: `../images/logo.png`
-- If you move images or JS to other folders, update these relative paths.
-
-If you want, tell me the new image/js folders and I will update all HTML files.
-
